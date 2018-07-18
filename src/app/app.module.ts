@@ -1,4 +1,5 @@
-import { DataTransactionService } from './core/data-transaction.service';
+import { JetonService } from './core/jeton/jeton.service';
+import { DataTransactionService } from './core/services/data-transaction.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AgoraComponent } from './agora/agora.component';
 import { FichePjComponent } from './fiche-pj/fiche-pj.component';
 import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -24,9 +26,13 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     CommonModule,
     RouterModule,
-    CoreModule
+    CoreModule,
+    AppRoutingModule
   ],
-  providers: [DataTransactionService],
+  providers: [
+    DataTransactionService,
+    JetonService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

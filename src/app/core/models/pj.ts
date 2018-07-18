@@ -26,11 +26,12 @@ export class Pj {
     private _sauvVolonte: Sauvegarde;
     private _sauvVigueur: Sauvegarde;
     private _sauvReflexe: Sauvegarde;
-
+    private _CA = 10;
 
     constructor(nom: string, age: number, poids: number, experience: number, couleurPeau: string, couleurYeux: string, couleurCheveux: string,
         race: Race, classes: Classe[], force: Caracteristique, dexterite: Caracteristique, constitution: Caracteristique, intelligence: Caracteristique,
-        sagesse: Caracteristique, charisme: Caracteristique, dons: Don[], competences: Competence[], sauvVolont: Sauvegarde, sauvVigueur: Sauvegarde, sauvRef: Sauvegarde) {
+        sagesse: Caracteristique, charisme: Caracteristique, dons: Don[], competences: Competence[], sauvVolont: Sauvegarde, sauvVigueur: Sauvegarde,
+        sauvRef: Sauvegarde, CA: number) {
         this._age = age
         this._charisme = charisme
         this._classes = classes
@@ -51,8 +52,15 @@ export class Pj {
         this._sauvReflexe = sauvRef
         this._sauvVigueur = sauvVigueur
         this._sauvVolonte = sauvVolont
+        this._CA = CA
     }
 
+    public get CA() {
+        return this._CA;
+    }
+    public set CA(value) {
+        this._CA = value;
+    }
     public get experience() {
         return this._experience;
     }

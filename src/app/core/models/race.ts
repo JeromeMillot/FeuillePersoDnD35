@@ -1,13 +1,13 @@
-import { Classe } from "./classe";
-import { Competence } from "./competence";
-import { Sauvegarde } from "./sauvegarde";
-import { Don } from "./don";
-import { Caracteristique } from "./caracteristique";
+import { Classe } from './classe';
+import { Competence } from './competence';
+import { Sauvegarde } from './sauvegarde';
+import { Don } from './don';
+import { Caracteristique } from './caracteristique';
 
 export class Race {
-  private _label = "";
-  private _description = "";
-  private _catTaille = "";
+  private _label = '';
+  private _description = '';
+  private _catTaille = '';
   private _ageMax = 0;
   private _ajustNiv = 0;
   private _vitDeplac = 0;
