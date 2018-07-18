@@ -44,7 +44,7 @@ export class JetonService {
       currentTimestamp: any = new Date(), // @TODO : passer en milliseconde - Utilisé pour définir l'heure de génération du jeton + l'heure d'expiration (génération + 15 minutes)
       endTimestamp: any = new Date(),
       secret: string;
-      secret = '7nRbZCrLP5O4V3mTMQvpyuqf11aJEIjvvEIrRSoyc5UYiCZGdIQV9GQ3bEhwFLnViTzKoWJumJRzJQulg79HyUtusub5lULFbodJ'; // Secret
+      secret = 'none'; // Secret
 
       endTimestamp = Math.round(endTimestamp.setDate(currentTimestamp.getDate() + 1) / 1000);
       currentTimestamp = Math.round(currentTimestamp.setDate(currentTimestamp.getDate() - 1) / 1000);
